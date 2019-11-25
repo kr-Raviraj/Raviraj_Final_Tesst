@@ -44,6 +44,18 @@ SELECT Emp_Id as Odd_Id, Emp_Name from   employees
 where  mod(Emp_Id,2) = 1;
 
 Querry4:
+SELECT Dept_id, AVG(Salary)
+	FROM Employee
+		WHERE Dept_id  NOT NULL
+			GROUP BY department_id;
 
 Querry5:
+Select Dept_Id,Max(Salary)
+From (Select E1.Dept_Id,E1.Salary
+      From Employee E1,(Select Dept_Id,Max(Salary) as Salary
+                        From Employee group by Dept_Id) E2
+      Where E1.Dept_Id = E2.Dept_Id
+      And E1.Salary<E2.Salary) E
+Group by Dept_Id
+
 
