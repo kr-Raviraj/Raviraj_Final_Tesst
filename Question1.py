@@ -35,6 +35,8 @@ class Matrix():
             outStr += 'Row %s = %s\n' % (i + 1, self.matrix[i])
 
         return outStr
+
+    
 a = Matrix(3, 3)
 R = 3
 C = 3
