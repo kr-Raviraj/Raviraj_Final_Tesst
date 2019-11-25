@@ -1,0 +1,40 @@
+Question:
+"""Create a database using your name. Create the following tables inside it:
+
+Employee: Emp_Id (INT), Emp_Name, Salary (this is annual sal), Dept_Id, Manager_Id, Phone
+Department: Dept_Id (INT numbers 1/2/3/4 so on), Dept_Name
+
+Ques1: Display the employee name and department name for the departments with Id equals 1 or 2 or 3.
+Ques2: Query the basic pay of each Employee and display the employee id and his basic pay.
+Formula of basic pay: (((Salary/30)*40)/100)
+Ques3: Query the names of those employees whose Emp Id is an odd number
+Ques4: Display average employee salary from each department.
+Ques5: Find the 2nd highest salary of employee department wise."""
+
+Solution:
+
+
+
+CREATE DATABASE Raviraj;
+
+CREATE TABLE Employee (
+    Emp_Id int,
+    Emp_Name varchar(255),
+    Salary int,
+    Dept_Id int,
+    Manager_Id int,
+    Phone int
+);
+
+CREATE TABLE Department  (
+    Dept_Id int,
+    Dept_Name varchar(255)
+);
+
+Querry1:
+
+SELECT Emp_Name FROM Employees WHERE Dept_id IN (
+SELECT Dpt_Name from Department Where Dept_id IN (1,2,3)
+);
+
+Querry2:
