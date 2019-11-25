@@ -36,7 +36,7 @@ class Matrix():
 
         return outStr
 
-    
+
 a = Matrix(3, 3)
 R = 3
 C = 3
