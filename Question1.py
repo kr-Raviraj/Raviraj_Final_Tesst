@@ -13,7 +13,6 @@ def insertLetter(letter, pos):
 def spaceIsFree(pos):
     return matrix[pos] == ' '
 
-
 def printMatrix(matrix):
     print(matrix[1], matrix[2], matrix[3])
     print(matrix[4], matrix[5], matrix[6])
