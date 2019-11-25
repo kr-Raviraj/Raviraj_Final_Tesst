@@ -36,7 +36,7 @@ SELECT Dpt_Name from Department Where Dept_id IN (1,2,3)
 );
 
 Querry2:
-SELECT Emp_Id,(((Salary/30)*40)/100) AS "Basic_Pay",
+SELECT Emp_Id,(((Salary/30)*40)/100) AS "Basic_Pay"
 FROM  Employee;
 
 Querry3:
@@ -46,8 +46,8 @@ where  mod(Emp_Id,2) = 1;
 Querry4:
 SELECT Dept_id, AVG(Salary)
 	FROM Employee
-		WHERE Dept_id  NOT NULL
-			GROUP BY department_id;
+		WHERE Dept_Id
+			GROUP BY Dept_Id;
 
 Querry5:
 Select Dept_Id,Max(Salary)
