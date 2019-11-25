@@ -11,10 +11,8 @@ Ques3: Query the names of those employees whose Emp Id is an odd number
 Ques4: Display average employee salary from each department.
 Ques5: Find the 2nd highest salary of employee department wise."""
 
+
 Solution:
-
-
-
 CREATE DATABASE Raviraj;
 
 CREATE TABLE Employee (
@@ -33,8 +31,19 @@ CREATE TABLE Department  (
 
 Querry1:
 
-SELECT Emp_Name FROM Employees WHERE Dept_id IN (
+SELECT Emp_Name FROM Employee WHERE Dept_id IN (
 SELECT Dpt_Name from Department Where Dept_id IN (1,2,3)
 );
 
 Querry2:
+SELECT Emp_Id,(((Salary/30)*40)/100) AS "Basic_Pay",
+FROM  Employee;
+
+Querry3:
+SELECT Emp_Id as Odd_Id, Emp_Name from   employees
+where  mod(Emp_Id,2) = 1;
+
+Querry4:
+
+Querry5:
+
