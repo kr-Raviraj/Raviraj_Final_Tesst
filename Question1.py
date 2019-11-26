@@ -9,7 +9,6 @@ matrix = [' ' for x in range(10)]
 def insertLetter(letter, pos):
     matrix[pos] = letter
 
-
 def spaceIsFree(pos):
     return matrix[pos] == ' '
 
